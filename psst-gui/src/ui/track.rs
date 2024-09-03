@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
 use druid::{
-    widget::{CrossAxisAlignment, Either, Flex, Label, LineBreaking, ViewSwitcher},
+    widget::{CrossAxisAlignment, Either, Flex, Label, ViewSwitcher},
     LensExt, LocalizedString, Menu, MenuItem, Size, TextAlignment, Widget, WidgetExt,
 };
 use psst_core::{
@@ -314,7 +314,7 @@ pub fn track_menu(
             menu = menu.entry(
                 MenuItem::new(
                     LocalizedString::new("menu-item-remove-from-playlist")
-                        .with_placeholder("Remove from current Playlist"),
+                        .with_placeholder("Remove from Current Playlist"),
                 )
                 .command(playlist::REMOVE_TRACK.with(PlaylistRemoveTrack {
                     link: playlist.to_owned(),
